@@ -1,0 +1,40 @@
+@host = https://localhost:7235
+@token = COLE_O_TOKEN_DO_LOGIN
+
+### Substitua pelos dados do usuário criado localmente; não versione senhas reais.
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "nomeUtilizador": "SEU_USUARIO",
+  "palavraPasse": "SUA_SENHA"
+}
+
+### Cadastrar
+POST {{host}}/api/viaturas
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "placa": "ABC1D23",
+  "modelo": "SUV",
+  "anoFabricacao": 2024,
+  "quilometragemInicial": 100
+}
+
+### Listar
+GET {{host}}/api/viaturas
+Authorization: Bearer {{token}}
+
+### Atualizar (substitua o ID)
+PUT {{host}}/api/viaturas/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "placa": "ABC1D23",
+  "modelo": "SUV",
+  "anoFabricacao": 2024,
+  "quilometragemAtual": 150,
+  "estado": "Em Patrulha"
+}

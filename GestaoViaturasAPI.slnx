@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="GestaoViaturasAPI.Tests/GestaoViaturasAPI.Tests.csproj" />
+  <Project Path="GestaoViaturasAPI/GestaoViaturasAPI.csproj" />
+</Solution>
