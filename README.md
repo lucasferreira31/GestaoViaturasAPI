@@ -88,7 +88,7 @@ Testes unitários verificam as regras da entidade. Testes de integração execut
 
 SQLite não substitui a validação das migrations e dos detalhes específicos do SQL Server. O tratamento de violação de índice único em requisições concorrentes usa os códigos 2601/2627 do SQL Server.
 
-A execução automática dos testes no GitHub Actions ainda não está configurada neste repositório. Para validar o projeto, execute os testes localmente com o comando acima.
+O workflow de GitHub Actions restaura as dependências, compila em Release e executa os testes automaticamente a cada push e pull request. Os resultados ficam disponíveis como artefato da execução. Acompanhe em [GitHub Actions](https://github.com/lucasferreira31/GestaoViaturasAPI/actions/workflows/ci.yml).
 
 ## Organização e limites atuais
 
